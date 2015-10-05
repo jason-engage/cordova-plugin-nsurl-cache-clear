@@ -7,13 +7,13 @@
     </engines>
     <asset src="www/nsurl-cache-clear.js" target="js/nsurl-cache-clear.js"/>
     <js-module name="nsurlcache" src="www/nsurl-cache-clear.js">
-        <clobbers target="nsurlcache"/>
+        <clobbers target="window.nsurlcache"/>
     </js-module>
     <!-- ios -->
     <platform name="ios">
-        <config-file parent="/widget" target="config.xml">
-            <feature name="CordovaNSURLCacheClear">
-                <param name="ios-package" value="CordovaNSURLCacheClear"/>
+        <config-file parent="/*" target="config.xml">
+            <feature name="nsurlcache">
+                <param name="ios-package" value="nsurlcache"/>
             </feature>
         </config-file>
         <header-file src="src/ios/CordovaNSURLCacheClear.h"/>
