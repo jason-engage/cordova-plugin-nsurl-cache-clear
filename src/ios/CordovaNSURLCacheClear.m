@@ -12,7 +12,7 @@
 
 - (void)clear:(CDVInvokedUrlCommand*)command
  {
-     [[NSURLCache sharedURLCache] removeAllCachedResponses]
+     [[NSURLCache sharedURLCache] removeAllCachedResponses];
 
  }
 
