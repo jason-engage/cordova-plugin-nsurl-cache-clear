@@ -13,6 +13,11 @@
 - (void)clear:(CDVInvokedUrlCommand*)command
  {
      [[NSURLCache sharedURLCache] removeAllCachedResponses]
+
+ }
+
+@end
+
 //
 //     NSString* callbackId = [command callbackId];
 //     NSString* name = [[command arguments] objectAtIndex:0];
@@ -23,7 +28,7 @@
 //                                messageAsString:msg];
 //
 //     [self success:result callbackId:callbackId];
- }
+ //}
 //
 // - (void)pluginInitialize
 // {
@@ -44,7 +49,7 @@
 //     return self;
 // }
 //
- @end
+// @end
 //
 // #import "HWPHello.h"
 //

@@ -1,26 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
-    id="com.engage.cordova-nsurl-cache-clear"
-    version="0.0.1-dev">
-
+<plugin id="com.engage.cordova-nsurl-cache-clear" version="0.0.1" xmlns="http://www.phonegap.com/ns/plugins/1.0">
     <name>CordovaNSURLCacheClear</name>
-
     <description>Cordova clear NSURL cache plugin</description>
-
     <engines>
-        <engine name="cordova" version=">=3.0.0" />
+        <engine name="cordova" version=">=3.4.0"/>
     </engines>
-
+    <asset src="www/nsurl-cache-clear.js" target="js/nsurl-cache-clear.js"/>
+    <js-module name="nsurlcache" src="www/nsurl-cache-clear.js">
+        <clobbers target="nsurlcache"/>
+    </js-module>
     <!-- ios -->
     <platform name="ios">
-        <config-file target="config.xml" parent="/*">
+        <config-file parent="/widget" target="config.xml">
             <feature name="CordovaNSURLCacheClear">
-                <param name="ios-package" value="CordovaNSURLCacheClear" />
-                <param name="onload" value="true" />
+                <param name="ios-package" value="CordovaNSURLCacheClear"/>
             </feature>
         </config-file>
-
-        <header-file src="src/ios/CordovaNSURLCacheClear.h" />
-        <source-file src="src/ios/CordovaNSURLCacheClear.m" />
+        <header-file src="src/ios/CordovaNSURLCacheClear.h"/>
+        <source-file src="src/ios/CordovaNSURLCacheClear.m"/>
     </platform>
 </plugin>
